@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -13,11 +14,16 @@
             font-size: 36px;
             color: #ff1493; /* Cor rosa */
         }
+        p {
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
     <h1>Te odeio, Maria Clara!</h1>
-    <p>Este é um site dedicado a expressar meu ódio por você, Maria Clara.</p>
+    <p>te odeio com todas as minhas forças Maria Clara.</p>
+    
+    
     
 </body>
 </html>
