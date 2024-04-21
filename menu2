@@ -1,0 +1,23 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Maria Clara</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            font-size: 36px;
+            color: #ff1493; /* Cor rosa */
+        }
+    </style>
+</head>
+<body>
+    <h1>Te odeio, Maria Clara!</h1>
+    <p>Este é um site dedicado a expressar meu ódio por você, Maria Clara.</p>
+    
+</body>
+</html>
