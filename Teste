@@ -109,7 +109,7 @@ function telainicio() {
     }
     console.log("CADASTRADO COM SUCESSO!");
     readline.question("Pressione ENTER para continuar...");
-    telaainiciol(); 
+    telainicio(); 
             break;
         case 3:
             if (opcao === 3)
@@ -152,4 +152,3 @@ cadastro();
 
 
 cadastro();
-
