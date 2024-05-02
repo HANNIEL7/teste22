@@ -1,0 +1,155 @@
+ const readline = require("readline-sync");
+
+var nome = "";
+var sobrenome = "";
+var email = "";
+var senha = "";
+
+function cadastro() {
+    console.clear();
+    console.log("=========================================");
+    console.log("|    Sistema de Cadastro de Clientes    |");
+    console.log("=========================================");
+    console.log("|\t\t\t\t\t\t\t\t\t\t|");
+    console.log("|\t1. Realizar login \t\t\t\t\t|");
+    console.log("|\t2. Criar conta\t\t\t\t\t\t|");
+    console.log("|\t0. Sair do sistema\t\t\t\t\t|");
+    console.log("|\t\t\t\t\t\t\t\t\t\t|");
+    console.log("|=======================================|");
+
+    var op = readline.questionInt("Escolha uma opcao: ");
+
+    switch (op) {
+        case 1:
+            console.log("| \t\t\t LOGIN \t\t\t\t\t\t| ");
+            var login = readline.question("LOGIN: ");
+            var senha = readline.question("SENHA: ");
+            
+            telainicio();
+            break;
+        case 2:
+            console.log("=========================================");
+    console.log("|    Cadastro de Cliente    |");
+    console.log("=========================================");
+    nome = readline.question("NOME: ");
+    sobrenome = readline.question("SOBRENOME: ");
+    email = readline.question("EMAIL: ");
+    senha = readline.question("SENHA: ");
+    var confSenha = readline.question("CONFIRME A SENHA: ");
+    if (senha !== confSenha) {
+        console.log("SENHAS DIFERENTES");
+        let pergunta = readline.question('pressione ENTER para voltar ..')
+        cadastro()
+    }
+    console.log("CADASTRADO COM SUCESSO!");
+    readline.question("Pressione ENTER para continuar..");
+    cadastro() 
+            break;
+        case 0:
+            if (opcao === 0){
+                console.log("Saindo do sistema...");
+            }
+            break;
+        default:
+            console.log('Opção inválida');
+            break;
+    }
+}
+
+
+function telainicio() {
+    console.clear();
+    console.log("======================================== ");
+    console.log("|\t\t\t TELA INICIAL\t\t\t   |");
+    console.log("======================================== ");
+    console.log("|\t\t\tAgenda Semanal \t\t\t   |")
+    console.log("|---------------------------------------");
+    console.log("| Seg.\t\t | Ter.\t\t | Qua.\t\t   |")
+    console.log("|\t\t\t |\t\t\t |\t\t\t   |")
+    console.log("|\t\t\t |\t\t\t |\t\t\t   |")
+    console.log("|---------------------------------------");
+    console.log("|\t\t\t|Agendar Cliente|\t\t   |")
+    console.log("|---------------------------------------");
+    console.log('|1- Cadastrar serviço\t\t\t\t   |')
+    console.log('|2- Cadastrar usuário\t\t\t\t   |')
+    console.log('|3- Cadastrar agendamento\t\t\t   |')
+    console.log('|0- Sair do sistema\t\t\t\t\t   |')
+    var opcao = readline.questionInt("Escolha uma opção do menu: ");
+    switch (opcao) {
+        case 1:
+            console.clear();
+    console.log("======================================== ");
+    console.log("|\t\t\t MENU DE SERVIÇOS\t\t   |");
+    console.log("======================================== ");
+    console.log("|Lista de Serviços:\t\t\t\t\t   |")
+    console.log("|---------------------------------------");
+    var nomeServico = readline.question ("|Nome:");
+    var descricao = readline.question ("|Descrição:   ");
+    var duracao = readline.question("|Duração Estimada:");
+    var preco = readline.question("|Preço:")
+    console.log("|---------------------------------------");
+    console.log("||Adicionar Serviço|\t\t\t\t   |")
+    console.log("======================================== ");
+    readline.question("Pressione ENTER para retornar à tela inicial.");
+    telainicio(); 
+            break;
+        case 2:
+            console.log("=========================================");
+    console.log("|    Cadastro de Cliente    |");
+    console.log("=========================================");
+    nome = readline.question("NOME: ");
+    sobrenome = readline.question("SOBRENOME: ");
+    email = readline.question("EMAIL: ");
+    senha = readline.question("SENHA: ");
+    var confSenha = readline.question("CONFIRME A SENHA: ");
+    if (senha !== confSenha) {
+        console.log("SENHAS DIFERENTES");
+        
+        
+    }
+    console.log("CADASTRADO COM SUCESSO!");
+    readline.question("Pressione ENTER para continuar...");
+    telaainiciol(); 
+            break;
+        case 3:
+            if (opcao === 3)
+            console.log("======================================== ");
+console.log("|\t\t\t AGENDAMENTO \t\t\t   |");
+console.log("======================================== ");
+console.log("|Dados do Serviço:\t\t\t\t\t   |")
+console.log("|---------------------------------------");
+console.log("|Nome do Cliente:\t\t\t\t\t   |");
+console.log("|Serviços: \t\t\t\t\t\t\t   |");
+console.log("|Tempo Estimado:\t\t\t\t\t   |");
+console.log("|Preço:\t\t\t\t\t\t\t\t   |")
+console.log("|Local: \t\t\t\t\t\t\t   |")
+console.log("|---------------------------------------");
+console.log("|\t\t\t  |Cancelar|\t\t\t   |")
+console.log("======================================== ");
+            break;
+        case 0:
+            if (opcao === 0){
+                console.log("Saindo do sistema...");
+            }
+            
+            
+            break;
+        case 4:
+        default:
+            console.log('Opção inválida');
+            break;
+    }
+
+
+
+
+
+cadastro();
+
+    
+    telainicio();
+}
+
+
+cadastro();
+
